@@ -1,0 +1,90 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">    
+        <div class="annuaire">
+            <div class="respon">
+                <div><h3>Liste des employés de Orange</h3></div>
+                <div><button onclick="ouvrirModalAjout()">Ajouter</button></div>
+            </div>
+           <div class="procedure">
+                <div class="table">
+                    <div class="search">
+                        <select name="" id="">
+                            <option value="id">id</option>
+                        </select>
+                        <input type="text" placeholder="Rechercher">
+                    </div>
+                    <table id="annuaire">
+                        <thead>
+                            <td>Noms</td>
+                            <td>Email</td>
+                            <td>Fonction</td>
+                            <td>Actions</td>
+                        </thead>
+                        <tbody>
+
+                        </tbody>
+                    </table>
+                </div>
+           </div>
+           
+        </div>
+    </div>
+
+    <!-- ...................Modal d'ajout..................... -->
+    <div id="modalAjout" class="modal">
+        <div class="addmodal">
+            <div class="entete">
+                <b>Ajouter un employé</b> <button onclick="fermerModalAjout()">&times;</button>
+            </div>
+                <div class="corp">
+                    <div>
+                        <input id="name" name="name" type="text" placeholder="Veillez entrer le nom">
+                        <span class="error" id="error-name"></span>
+                    </div>
+                    <div>
+                        <input id="email" name="email" type="email" placeholder="Veillez entrer l'email'">
+                        <span class="error" id="error-email"></span>
+                    </div>
+                    <div>
+                        <input id="fonction" name="fonction" type="text" placeholder="Veillez entrer la fonction">
+                        <span class="error" id="error-fonction"></span>
+                    </div>
+                </div>
+                <div class="pied">
+                    <button class="close user" onclick="fermerModalAjout()" type="submit">Annuler</button>
+                    <button class="add user" onclick="ajouterannuaire()" type="submit">Ajouter</button>
+                </div>
+        </div>
+    </div>
+
+    <!-- ...................Modal de suppression..................... -->
+    <div id="modaldelete" class="modal">
+        <div class="deletemodal">
+            <div class="entete">
+                <b>Supprimer</b> <button class="fermer" onclick="fermerModalDelete()">&times;</button>
+            </div>
+                <div class="corp">
+                    <p style="text-align: center; color: red; font-size: 18px;">Êtes vous sûre de vouloir supprimer ceci?</p>
+                </div>
+                <div class="pied" style="display: flex; justify-content: space-between; padding: 20 30px;">
+                    <div><button onclick="fermerModalDelete()" style="padding: 15px; background-color: gray; border: none; border-radius: 5px;">Annuler</button></div>
+                    <div><button onclick="supprimer()" style="padding: 15px; background-color: red; color: white; border: none; border-radius: 5px;">Supprimer</button></div>
+                </div>
+        </div>
+    </div>
+
+    <div class="toaster">
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

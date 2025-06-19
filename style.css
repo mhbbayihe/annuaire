@@ -1,0 +1,442 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgba(128, 128, 128,0.1);
+}
+
+nav{ 
+    background-color: white;
+}
+
+nav ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 40px;
+    width: 100%;
+    padding: 30px;
+}
+
+nav ul li{
+    list-style: none;
+    margin: 0 50px 0 50px;
+}
+
+nav a{
+    color: black;
+    text-decoration: none;
+}
+
+nav a:hover{
+    color: blue;
+}
+
+
+.modal{
+    display: none;
+    z-index: 1000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+
+.deletemodal{
+    background-color: white;
+    padding: 0;
+    margin: 0;
+    width: 450px;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+}
+.deletemodal .entete{
+    border-bottom: 1px solid gray;
+    padding: 10px;
+    text-align: center;
+}
+
+.deletemodal .entete button{
+    float: right;
+    font-size: 18px;
+    background: none;
+    border: none;
+}
+
+.deletemodal .corp{
+    padding: 10px 20px 0 20px;
+}
+
+
+.addmodal{
+    background-color: white;
+    padding: 0;
+    margin: 0;
+    width: 450px;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+}
+
+.addmodal .entete{
+    border-bottom: 1px solid gray;
+    padding: 10px;
+    text-align: center;
+}
+
+.addmodal .entete button{
+    float: right;
+    font-size: 18px;
+    background: none;
+    border: none;
+}
+
+.addmodal .corp{
+    padding: 10px 20px 0 20px;
+}
+
+.addmodal .corp div{
+    margin-top:20px;
+}
+
+.addmodal .corp input{
+    border-radius: 5px;
+    border: 1px solid gray;
+    font-size: 16px;
+    padding: 2% 2%;
+    height: 40px;
+    display: block;
+    width: 100%;
+}
+
+.addmodal .corp input:focus{
+    border-color: blue;
+    outline: none;
+}
+
+.pied{
+    margin-bottom: 10px;
+    padding: 3%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.pied .user{
+    padding: 2% 2%;
+    border-radius: 2px;
+    border: none;
+    font-size: 15px;
+    box-shadow: 0 1px 2px gray;
+}
+
+.add{
+    background-color: blue;
+    color: white;
+}
+
+.close{
+    background-color: gray;
+    color: white;
+}
+
+.update{
+    background-color: green;
+    color: white;
+}
+
+.add:hover{
+    cursor: pointer;
+}
+
+
+.span{
+    display: block;
+    height: 1px;
+    width: 20px;
+    margin: 5px auto;
+    background-color: black;
+}
+
+.profil{
+    margin-right: 40px;
+}
+
+.profil img{
+    border-radius: 50%;
+    width: 50px;
+}
+
+.container{
+    display: block;
+    margin-top: 60px;
+    flex-direction: row;
+}
+
+
+.annuaire{
+    padding-top: 20px;
+    padding-left: 3%;
+    padding-right: 3%;
+}
+
+.annuaire h3{
+   margin-left: 20px;
+}
+
+.procedure{
+    display: flex;
+}
+
+.respon{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.annuaire .buton{
+    display: none;
+    padding: 1% 1%;
+    background-color: rgb(91, 91, 247);
+    color: white;
+    font-size: 14px;
+    border: none;
+    width: 150px;
+    height: 30px;
+    border-radius: 5px;
+    box-shadow: 1px 2px 3px gray;
+}
+
+@media (min-width:850px) {
+    .annuaire .table{
+        width: 100%;
+    }    
+}
+
+
+.annuaire .table .search{
+    display: flex;
+    justify-content: space-between;
+    padding: 2% 3%;
+    background-color: aliceblue;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.annuaire .table .search select{
+    height: 35px;
+    width: 100px;
+    color: gray;
+    padding:4px;
+}
+
+.annuaire .table .search input{
+    height: 35px;
+    width: 200px;
+    color: gray;
+}
+
+.annuaire .table table{
+    width: 100%;
+    border: 1px solid black;
+    border-spacing: 0;
+}
+
+.annuaire .table table thead{
+    background-color: black;
+    color: white;
+    border: none;
+    height: 35px;
+}
+
+.annuaire .table table tbody{
+    background-color: white;
+}
+
+.annuaire .table table tr{
+    border-bottom: 1px solid gray;
+    height: 35px;
+}
+
+.annuaire .table table tr td{
+    padding: 10px;
+    text-align: center;
+    border-bottom: 1px solid gray;
+
+}
+
+.annuaire .table table{
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.annuaire .table table button{
+    color: white;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 1px 2px 3px gray;
+}
+
+.view{
+    background-color: rgb(250, 225, 6);
+    margin-left: 5px;
+}
+
+.modif{
+    background-color: green;
+    margin-left: 10px;
+}
+
+.delete{
+    background-color: red;
+    margin-left: 10px;
+    padding: 10px;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+}
+
+
+.annuaire .respon button{
+    padding: 10;
+    background-color: rgba(91, 91, 247,1);
+    color: white;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 1px 2px 3px gray;
+}
+
+.annuaire .respon button:hover{
+    background-color: rgba(91, 91, 247,0.7);
+}
+
+.annuaire.active{
+    width: 74%;
+    margin-left: 100px;
+    float: right;
+    margin-top: -18px;
+    animation: deplacement1 1s ease-in  1 normal ;
+}
+
+.error{
+    color: red;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.toaster{
+    position: absolute;
+    bottom: 10px;
+    right: 20px;
+}
+
+.toaster div{
+    height: 50px;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    color: white;
+}
+
+.toaster .succes{
+    background-color: rgba(28, 145, 62, 0.95);
+    padding: 10px;
+}
+
+.toaster .delet{
+    background-color: rgba(209, 35, 22, 0.95);
+    padding: 10px;
+}
+
+/* -------------Responsive------------------ */
+@media (max-width:850px) {
+
+    .ajouter{
+        float: right;
+    }
+
+    .annuaire .table{
+        width: 100%;
+    }
+
+    .annuaire .buton{
+        display: block;
+    }
+    
+}
+
+@media (max-width:690px) {
+
+    .ajouter {
+        display: none;
+    }
+
+    
+}
+
+
+@media (max-width:550px) {
+
+    .logo{
+        font-size: 12px;
+        margin-left: 20px;
+    }
+
+    .td{
+        text-align: right;
+    }
+
+    .td button{
+        display: block;
+        margin: 5px auto;
+    }
+    
+}
+
+@media (max-width:500px) {
+
+    .procedure .table .search select{
+        display: none;
+    }
+
+    .annuaire .table .search {
+        justify-content: end;
+    }
+
+    .addmodal{
+        width: 350px;
+    }
+    
+}
+
+@media (max-width:400px) {
+
+    .addmodal{
+        width: 250px;
+    }
+
+    .logo{
+        font-size: 9px;
+    }
+    
+}
+
